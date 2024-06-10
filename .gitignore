@@ -1,5 +1,8 @@
 .DS_Store
 __pycache__
 *.pyc
-datasets/*
+datasets/archive
+datasets/archive.zip
 topic_model
+datasets/words.json
+datasets/test_assignment_data.csv
