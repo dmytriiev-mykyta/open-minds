@@ -2,7 +2,7 @@
 
 ## Summary
 
-The latent Dirichlet allocation model was trained on the dataset of news in russian language. Visualization of probability distributions of words within topics and topics across documents was created. The trained model CV coherence score is **0.45**.
+The latent Dirichlet allocation model was trained on the dataset of news in russian language. Visualization of probability distributions of words within topics and topics across documents was created. The trained model CV coherence score is **0.45**. The solution could be found in the file **identify_topics.ipynb**.
 
 ## The problem
 There is a dataset of news messages in russian language collected from various sources. The task is to identify topics of these messages and key words that are characteristic for each topic.
@@ -46,7 +46,7 @@ We do not process footnotes in our analysis.
 
 ### Serialization of the preprocessed dataset
 
-The dataset was preprocessed and saved to the file `datasets/processed_dataset.json`. This file is a list of objects of the following structure:
+The dataset was preprocessed and saved to the file **datasets/processed_dataset.json**. This file is a list of objects of the following structure:
 ```json
 {
     "text": "<preprocessed text of a news message>", 
