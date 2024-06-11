@@ -65,3 +65,19 @@ We trained an LDA model with hyperparameters `no_below=5`, `no_above=0.9` and `n
 Topics identified within the trained model were displayed with the *pyLDAvis* utility. Probabilities distributions of words within topics are shown in the bar chart in the right part of the visualization. Probabilities of topics across the documents are displayed as sizes of circles in the left part of the visualization.
 
 The described solution reaches CV coherence score of **0.45**, so its quality is poor. There might be more stop words in the corpus, which are not deleted at the preprocessing step. We propose to identify these words and add them to the list `TextPreprocessor.stop_words`
+
+## Discussion
+
+In this analysis we identified several topics that allow clear interpretation. Here is a list of selected topics with proposed interpretations:
+| Topic number | Ten most probable words of a topic | Interpretation |
+| :---: | :---: | :---: |
+| 1 | `0.136*"украина" + 0.081*"сша" + 0.039*"заявить" + 0.036*"американский" + 0.029*"киев" + 0.028*"страна" + 0.027*"ранее" + 0.023*"нато" + 0.021*"президент" + 0.019*"помощь"` | Relationships between Ukraine and the USA in the context of international military aid in repelling russian aggression |
+| 11 | `0.099*"врач" + 0.064*"продукт" + 0.056*"здоровье" + 0.041*"изменение" + 0.034*"регулярный" + 0.032*"почему" + 0.032*"учёный" + 0.027*"специалист" + 0.027*"часто" + 0.025*"организм"` | Healthcare advices |
+| 14 | `0.164*"банк" + 0.052*"организация" + 0.051*"бизнес" + 0.038*"физический" + 0.036*"средство" + 0.032*"счёт" + 0.031*"кредитный" + 0.029*"россия" + 0.026*"ограничение" + 0.025*"лицо"` | Banking policy |
+| 16 | `0.279*"ребёнок" + 0.175*"школа" + 0.158*"семья" + 0.056*"детский" + 0.054*"родитель" + 0.034*"школьник" + 0.027*"ученик" + 0.020*"учитель" + 0.016*"школьный" + 0.013*"фонд"` | School education |
+| 18 | `0.053*"температура" + 0.048*"среда" + 0.040*"неделя" + 0.039*"градус" + 0.038*"снег" + 0.037*"день" + 0.033*"воздух" + 0.031*"ночь" + 0.030*"погода" + 0.025*"подмосковье"` | Weather forecast |
+| 19 | `0.095*"компания" + 0.068*"рынок" + 0.040*"экономика" + 0.040*"труд" + 0.033*"цб" + 0.033*"дальнейший" + 0.025*"эксперт" + 0.025*"основный" + 0.024*"рост" + 0.024*"признаться"` | Economical policy |
+| 22 | `0.138*"дом" + 0.054*"здание" + 0.044*"улица" + 0.042*"огонь" + 0.040*"площадь" + 0.039*"пожар" + 0.036*"жилой" + 0.035*"метр" + 0.029*"техника" + 0.020*"мчс"` | Fire accidents |
+| 24 | `0.110*"россия" + 0.109*"президент" + 0.082*"путин" + 0.077*"владимир" + 0.038*"глава" + 0.032*"государство" + 0.031*"встреча" + 0.027*"российский" + 0.026*"рф" + 0.026*"международный"` | Politics |
+| 30 | `0.059*"игра" + 0.043*"команда" + 0.037*"матч" + 0.034*"спорт" + 0.025*"соревнование" + 0.025*"победа" + 0.024*"сезон" + 0.024*"чемпионат" + 0.023*"клуб" + 0.021*"первый"` | Sports news |
+| 49 | `0.050*"военный" + 0.042*"всу" + 0.041*"авдеевка" + 0.038*"сила" + 0.036*"российский" + 0.024*"оборона" + 0.024*"украина" + 0.023*"войско" + 0.022*"вооружить" + 0.021*"россия"` | Representation of a russian war against Ukraine in news format |
