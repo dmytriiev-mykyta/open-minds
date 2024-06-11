@@ -63,3 +63,5 @@ We apply the latent Dirichlet allocation (LDA) approach to identify main topics 
 We trained an LDA model with hyperparameters `no_below=5`, `no_above=0.9` and `num_topics = 30`, since CV coherence score for this model is the highest among the tested ones.
 
 Topics identified within the trained model were displayed with the *pyLDAvis* utility. Probabilities distributions of words within topics are shown in the bar chart in the right part of the visualization. Probabilities of topics across the documents are displayed as sizes of circles in the left part of the visualization.
+
+The described solution reaches CV coherence score of **0.45**, so its quality is poor. There might be more stop words in the corpus, which are not deleted at the preprocessing step. We propose to identify these words and add them to the list `TextPreprocessor.stop_words`
